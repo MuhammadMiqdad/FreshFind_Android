@@ -19,14 +19,13 @@ class HomeSearchActivity : AppCompatActivity() {
         binding = ActivityHomeSearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home_search)
-        val imagePath = intent.getStringExtra("image_path")
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val imagePath = intent.getStringExtra("image_path")
         if (imagePath != null) {
             val imgFile = File(imagePath)
             if (imgFile.exists()) {

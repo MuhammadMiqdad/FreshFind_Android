@@ -72,7 +72,7 @@ class CameraXActivity : ComponentActivity() {
                 }
             })
         }
-    }
+    } 
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
