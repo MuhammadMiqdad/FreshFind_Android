@@ -55,5 +55,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.camera.camera2.v140)
     implementation(libs.androidx.camera.lifecycle)
+    implementation (libs.retrofit)
+    implementation (libs.retrofit2.converter.gson)
+    implementation (libs.androidx.recyclerview)
+    implementation (libs.androidx.cardview)
+    implementation (libs.glide)
 
 }
