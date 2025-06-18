@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -60,5 +62,7 @@ dependencies {
     implementation (libs.androidx.recyclerview)
     implementation (libs.androidx.cardview)
     implementation (libs.glide)
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
 }

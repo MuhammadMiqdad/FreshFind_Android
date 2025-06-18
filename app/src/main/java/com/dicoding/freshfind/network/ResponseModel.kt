@@ -1,6 +1,7 @@
 package com.dicoding.freshfind.network
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ProductResponse(
     val message: String,

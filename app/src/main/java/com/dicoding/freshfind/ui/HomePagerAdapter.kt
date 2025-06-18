@@ -2,6 +2,7 @@ package com.dicoding.freshfind.ui.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.dicoding.freshfind.network.ProductWithPhoto
 import com.dicoding.freshfind.ui.categories.FishFragment
 import com.dicoding.freshfind.ui.categories.FruitFragment
 import com.dicoding.freshfind.ui.categories.VeggieFragment

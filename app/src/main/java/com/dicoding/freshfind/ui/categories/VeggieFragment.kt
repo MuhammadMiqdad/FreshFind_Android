@@ -1,5 +1,6 @@
 package com.dicoding.freshfind.ui.categories
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.freshfind.databinding.FragmentCategoryBinding
 import com.dicoding.freshfind.ui.ProductAdapter
+import com.dicoding.freshfind.ui.ProductDetailActivity
 import com.dicoding.freshfind.ui.ProductViewModel
 
 class VeggieFragment : Fragment() {
@@ -27,7 +29,13 @@ class VeggieFragment : Fragment() {
 
         // Set up RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = ProductAdapter()
+        val adapter = ProductAdapter { productId ->
+            // Navigate to ProductDetailActivity with the selected product ID
+            val intent = Intent(requireContext(), ProductDetailActivity::class.java)
+            intent.putExtra("PRODUCT_ID", productId)
+            startActivity(intent)
+        }
+
         binding.recyclerView.adapter = adapter
 
         // Initialize ViewModel
